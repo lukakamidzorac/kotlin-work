@@ -1,5 +1,6 @@
 // COMP2850 Portfolio: Week 2
 // Functions for working with triangle geometry
+// Luka Kamidzorac id- 201914015
 
 import kotlin.math.sqrt
 
