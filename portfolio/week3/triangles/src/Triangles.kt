@@ -8,6 +8,7 @@ fun isValidTriangle(t: Triangle): Boolean {
 }
 
 fun triangleArea(t: Triangle): Double {
+    require(isValidTriangle(t)) { "Invalid triangle: $t" }
     val (a, b, c) = t
     val s = (a + b + c) / 2
     return sqrt(s * (s - a) * (s - b) * (s - c))
