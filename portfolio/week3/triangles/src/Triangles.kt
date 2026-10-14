@@ -1,0 +1,15 @@
+import kotlin.math.sqrt
+
+typealias Triangle = Triple<Double,Double,Double>
+
+fun isValidTriangle(t: Triangle): Boolean {
+    val (a, b, c) = t
+    return a < b + c && b < a + c && c < a + b
+}
+
+fun triangleArea(t: Triangle): Double {
+    require(isValidTriangle(t)) { "Invalid triangle: $t" }
+    val (a, b, c) = t
+    val s = (a + b + c) / 2
+    return sqrt(s * (s - a) * (s - b) * (s - c))
+}
