@@ -13,15 +13,9 @@ class Triangle(val sideA: Double, val sideB: Double, val sideC: Double) {
     val area: Double
         get() = sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC))
     init {
-           require(____) { "Invalid triangle" }
+         require(sideA < sideB + sideC && sideB < sideA + sideC && sideC < sideA + sideB) { "Invalid triangle" }
        }
 
-       override fun toString() = "____"
-
-    init {
-        require(____) { "Invalid triangle" }
-    }
-
-    override fun toString() = "____"
+     override fun toString() = "Triangle($sideA, $sideB, $sideC)"
 
 }
