@@ -24,11 +24,7 @@ class ToDoList() {
             val parts = line.split(": ", limit = 3)
             items.add(ToDoItem(LocalDate.parse(parts[0]), ItemStatus.valueOf(parts[1]), parts[2]))
         }
-    }
-        // Implement code to read To Do list from a file here
-        // See data/to-do.csv for an example of the format
-    }
-
+    }   
     fun save(filename: String) {
         Path(filename).writer().use {
             for (item in items) {
